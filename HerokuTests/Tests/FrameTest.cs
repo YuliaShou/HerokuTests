@@ -1,5 +1,6 @@
 ﻿using HerokuTests.Pages;
 using HerokuTests.SeleniumFramework;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,10 @@ namespace HerokuTests.Tests
         {
             welcomePage.ClickPageButton("Frames");
             framesPage.ClickFramePageButton("Nested Frames");
-            //Assert.IsTrue(nestedFramePage.IsLeftFrameExist(), "Left Frame doesn't exist");
+            Assert.IsTrue(nestedFramePage.IsLeftFrameExist(), "Left Frame doesn't exist");
+            Assert.IsTrue(nestedFramePage.IsMiddleFrameExist(), "Middle Frame doesn't exist");
+            Assert.IsTrue(nestedFramePage.IsRightFrameExist(), "Right Frame doesn't exist");
+            Assert.IsTrue(nestedFramePage.IsBottomFrameExist(), "Bottom Frame doesn't exist");
         }
     }
 }
