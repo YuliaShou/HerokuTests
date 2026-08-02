@@ -74,6 +74,12 @@ namespace HerokuTests.SeleniumFramework
             Actions actions = new Actions(Driver);
             actions.MoveToElement(Element).Perform();
         }
+
+        public void RightClick()
+        {
+            Actions actions = new Actions(Driver);
+            actions.ContextClick(Element).Perform();
+        }
     }
 }
 

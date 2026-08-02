@@ -2,7 +2,7 @@ using HerokuTests.Pages;
 
 namespace HerokuTests.Tests
 {
-    public class Tests:BaseTest
+    public class CommonTests:BaseTest
     {
         WelcomePage welcomePage = new WelcomePage();
         ABTestingPage abTestingPage = new ABTestingPage();
@@ -35,7 +35,10 @@ namespace HerokuTests.Tests
             string textFromContextMenuPage = contextMenuPage.GetTextFromContextMenuLabel();
             string expectedText = "Context Menu";
             Assert.AreEqual(expectedText, textFromContextMenuPage, "Texts are not equal");
-
+            contextMenuPage.RightClickAreaForContextMenu();
+            Thread.Sleep(5000);
+            contextMenuPage.ClickOkOnAllert();
+            Thread.Sleep(5000);
         }
     }
 }
