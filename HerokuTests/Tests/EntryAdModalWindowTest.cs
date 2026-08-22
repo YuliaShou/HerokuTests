@@ -1,5 +1,6 @@
 ﻿using HerokuTests.Pages;
 using HerokuTests.Pages.ModalWindows;
+using HerokuTests.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,13 @@ namespace HerokuTests.Tests
             welcomePage.ClickPageButton("Entry Ad");
             string textFromEntryAdPageLabel = entryAdPage.GetTextFromEntryAdPageLabel();
             Assert.AreEqual("Entry Ad", textFromEntryAdPageLabel, "Texts are not equal");
-            Thread.Sleep(5000);
             bool isModalWindowDisplayed = modalWindowOnEntryAdPage.IsModalWindowDisplayed();
             Assert.IsTrue(isModalWindowDisplayed, "Modal Window is not displayed");
+            modalWindowOnEntryAdPage.ClickCloseButton();
+            Thread.Sleep(2000);
+            BrowserUtils.RefreshPage();
+            bool isModalWindowDisplayedAfterRefresh = modalWindowOnEntryAdPage.IsModalWindowDisplayed();
+            Assert.IsTrue(isModalWindowDisplayedAfterRefresh, "Modal Window is not displayed");
         }
     }
 }
