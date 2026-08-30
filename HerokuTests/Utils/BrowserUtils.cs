@@ -54,6 +54,20 @@ namespace HerokuTests.Utils
             driver.Navigate().Back();
         }
 
+        public static string GetIdCurrentTab()
+        {
+            return driver.CurrentWindowHandle;
+        }
+
+        public static List<string> GetAllTabs()
+        {
+            return driver.WindowHandles.ToList();
+        }
+
+        public static void SwitchToTab(string tab)
+        {
+            driver.SwitchTo().Window(tab);
+        }
     }
 }
 
