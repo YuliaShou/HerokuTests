@@ -2,7 +2,7 @@
 
 namespace HerokuTests.Tests
 {
-    public class AddRemoveElementsTest:BaseTest
+    public class AddRemoveElementsTest:HerokuBaseTest
     {
         AddRemoveElementsPage addRemoveElementsPage = new AddRemoveElementsPage();
         WelcomePage welcomePage = new WelcomePage();

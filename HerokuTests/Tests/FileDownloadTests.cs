@@ -3,7 +3,7 @@ using HerokuTests.Utils;
 
 namespace HerokuTests.Tests
 {
-    public class FileDownloadTests:BaseTest
+    public class FileDownloadTests:HerokuBaseTest
     {
         FileDownloadPage fileDownloadPage = new FileDownloadPage();
         WelcomePage welcomePage = new WelcomePage();

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HerokuTests.Tests
 {
-    public class FrameTest:BaseTest
+    public class FrameTest:HerokuBaseTest
     {
         FramesPage framesPage = new FramesPage();
         WelcomePage welcomePage = new WelcomePage();

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HerokuTests.Tests
 {
-    public class DropdownTest : BaseTest
+    public class DropdownTest : HerokuBaseTest
     {
         DropdownListPage dropdownListPage = new DropdownListPage();
         WelcomePage welcomePage = new WelcomePage();

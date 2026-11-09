@@ -2,7 +2,7 @@ using HerokuTests.Pages;
 
 namespace HerokuTests.Tests
 {
-    public class Tests:BaseTest
+    public class Tests:HerokuBaseTest
     {
         WelcomePage welcomePage = new WelcomePage();
         ABTestingPage abTestingPage = new ABTestingPage();

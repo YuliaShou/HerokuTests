@@ -2,7 +2,7 @@
 
 namespace HerokuTests.Tests
 {
-    public class FormAuthenticationTest:BaseTest
+    public class FormAuthenticationTest:HerokuBaseTest
     {
         FormAuthenticationPage formAuthenticationPage = new FormAuthenticationPage();
         WelcomePage welcomePage = new WelcomePage();

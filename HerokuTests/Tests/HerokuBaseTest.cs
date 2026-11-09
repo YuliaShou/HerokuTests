@@ -3,7 +3,7 @@ using HerokuTests.Utils;
 
 namespace HerokuTests.Tests
 {
-    public class BaseTest
+    public class HerokuBaseTest
     {
         WelcomePage welcomePage = new WelcomePage();
 

@@ -27,7 +27,8 @@ namespace HerokuTests.Utils
                 "--no-sandbox",
                 "--disable-dev-shm-usage",
                 "--disable-gpu",
-                "--window-size=1920,1080");
+                "--window-size=1920,1080",
+                "--incognito");
             var driver = new ChromeDriver(options);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             return driver;

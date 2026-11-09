@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HerokuTests.Tests
 {
-    public class CheckboxesTest:BaseTest
+    public class CheckboxesTest:HerokuBaseTest
     {
         CheckboxesPage checkboxesPage = new CheckboxesPage();
         WelcomePage welcomePage = new WelcomePage();
